@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Jersey10';
+    src: url('./assets/fonts/Jersey10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #6c5ce7;
+    font-family: 'Jersey10', sans-serif;
+}
+
+main {
+    padding: 1em;
+}

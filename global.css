@@ -42,12 +42,15 @@ main {
 }
 .title_section{
     grid-area: title_section;
-    font-family: 'Rubik-Regular';
-    color: whitesmoke;
     padding-top: 1em;
-    text-align: center;
     padding-bottom: 1em;
+}
+.title_section h1{
+    font-family: 'Rubik-Regular';
+    text-align: center;
+    color: whitesmoke;
 }
 .page_section{
     grid-area: page_section;
+    padding: 2em;
 }

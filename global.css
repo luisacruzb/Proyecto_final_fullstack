@@ -27,3 +27,27 @@ main {
     padding: 1em;
     text-align: center;
 }
+
+.page_container{
+    display: grid;
+    width: 100vw;
+    height: fit-content;
+    grid-template-areas: 
+        'header_section'
+        'title_section'
+        'page_section';
+}
+.header_section{
+    grid-area: header_section;
+}
+.title_section{
+    grid-area: title_section;
+    font-family: 'Rubik-Regular';
+    color: whitesmoke;
+    padding-top: 1em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+.page_section{
+    grid-area: page_section;
+}

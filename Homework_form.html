@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de dudas</title>
+    <link rel="stylesheet" href="./Homework_form.css">
+    <link rel="stylesheet" href="./global.css">
+</head>
+
+<body>
+    <div class="page_container">
+        <section class="header_section">
+            <div id="header"></div>
+            <script src="./header.js"></script>
+        </section>
+        <section class="title_section">
+            <h1>Formulario de dudas - Ciencias Naturales</h1>
+        </section>
+        <section class="page_section">
+            <form class="container" action="" method="post">
+                <label for="nombre">Nombre del estudiante o padre de famila</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required><br>
+                <label for="email">Correo electrónico</label>
+                <input type="text" id="email" name="email" placeholder="Ingresa tu correo electrónico" required><br>
+                <label for="Duda">Describe tu duda</label>
+                <textarea id="duda" name="duda" rows="4" placeholder="Escribe tu duda aquí..." required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

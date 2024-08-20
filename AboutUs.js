@@ -1,29 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const inner = document.querySelector('.carousel-inner');
-    let index = 0;
-    
-    function showSlide(i) {
-        const slides = document.querySelectorAll('.page_section > div');
-        const totalSlides = slides.length;
-        if (i >= totalSlides) index = 0;
-        if (i < 0) index = totalSlides - 1;
-        inner.style.transform = `translateX(-${index * 100}%)`;
+    const inner = document.querySelector('.carousel_inner');
+    const slides = document.querySelectorAll('.carousel_card');
+    let isTransitioning = false;
+
+    function moveToIndex(i) {
+        const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(inner).columnGap); // Ancho de cada slide + gap
+        inner.style.transform = `translateX(-${i * slideWidth}px)`;
     }
-    
+
+    function nextSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        // Mover la primera tarjeta al final sin animación
+        inner.appendChild(inner.firstElementChild);
+        moveToIndex(0);  // Ajustar la posición inmediatamente
+        isTransitioning = false;
+    }
+
+    function prevSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        // Mover la última tarjeta al principio sin animación
+        inner.prepend(inner.lastElementChild);
+        moveToIndex(0);  // Ajustar la posición inmediatamente
+        isTransitioning = false;
+    }
+
     document.querySelector('.carousel-control-prev').addEventListener('click', () => {
-        index--;
-        showSlide(index);
+        prevSlide();
     });
-    
+
     document.querySelector('.carousel-control-next').addEventListener('click', () => {
-        index++;
-        showSlide(index);
+        nextSlide();
     });
-    
-    showSlide(index);
+
+    // Hacer que el carrusel se mueva automáticamente
+    setInterval(nextSlide, 3000); // Tiempo entre cambios automáticos
 });
-
-
-
-
-

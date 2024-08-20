@@ -1,87 +1,71 @@
-/* body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.page_container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-/* }
-.title_section{ */
-.title_section{
-    text-align: center;
-    margin-bottom: 40px;
-}
-.title_section>h1{
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-.title_section p{
-    font-size: 1.5em;
-    color: #633e3e; */
-}
 .page_section{
-    display: flex;
     overflow: hidden;
-    position:relative;
+    width: 100%;
 }
-.page_section>div{
-    flex: 1;
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
+
+.carousel {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: red; */
 }
-.page_section h3{
-    font-size: 1.5em;
-    margin-bottom: 10px;
-} 
-.page_section p.ocuppation {
-    font-size: 1.2em;
-    color: #ebedd4;
-    margin-bottom: 10px;
-    font-style: italic;
-    position: relative;    
+
+.carousel_inner {
+    display: grid;
+    grid-auto-flow: column;
+    transition: transform 0.5s ease;
+    column-gap: 4em;
 }
-.page_section>img{
-    max-width: 50%;
+
+.carousel_card{
+    background-color: #9e92f4;
+    width: 20em;
+    height: 28em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.carousel_card>h3 {
+    font-size: 2em;
+    color: #413694;
+}
+
+.carousel_card>img {
+    max-width: 90%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
     size: 10px;
+}
 
+.ocuppation{
+    font-size: 1.2em;
+    font-family: 'Rubik-Regular';
+    color: #ebedd4;
+    margin-bottom: 10px;
+    font-style: italic;
 }
-.page_section p.profile{
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 20px;
+.profile{
+    font-family: 'Rubik-Regular';
+    font-size: 0.9em;
+    text-align: justify;
+    color: #413694;
+    height: 8em;
 }
-.page_section a{
+
+.carousel_card>a{
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.4em;
+    width: 100%;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #6E54B5;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.5s ease;
 }
-.page_section a:hover{
-    background-color:#0056b3;
-    cursor: pointer;
-}
-.carousel{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-.carousel-inner{
-    display: flex;
-    transition: transform 0.5s ease;
-}
+
 .carousel-control{
     position: absolute;
     top: 50%;
@@ -97,7 +81,7 @@
     font-size: 2em;
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 0.5em;
 }
 .carousel-control button:hover{
     background-color:rgba(0,0,0,0.8) ;

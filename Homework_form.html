@@ -19,7 +19,7 @@
             <h1>Formulario de dudas - Ciencias Naturales</h1>
         </section>
         <section class="page_section">
-            <form class="form_container" action="" method="post">
+            <form class="form_container" id="homeworkForm">
                 <h3>¿Qué duda tienes? </h3>
                 <label for="nombre">Nombre del estudiante o padre de familia</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
@@ -29,6 +29,33 @@
                 <textarea id="duda" name="duda" rows="4" placeholder="Escribe tu duda aquí..." required></textarea>
                 <input type="submit" value="Enviar">
             </form>
+            <script>
+                document.getElementById('homeworkForm').addEventListener('submit', function (event) {
+                    event.preventDefault()
+
+                    const formData = {
+                        nombre: document.getElementById('nombre').value,
+                        email: document.getElementById('email').value,
+                        duda: document.getElementById('duda').value
+                    }
+
+                    fetch('http://localhost:3000/submit_homework_form', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                        .then(response => response.json())
+                        .then(backend_data => {
+                            alert(backend_data.message)
+                            document.getElementById('homeworkForm').reset()
+                        })
+                        .catch(error => {
+                            console.error('Error:', error)
+                        })
+                })
+            </script>
         </section>
     </div>
 </body>

@@ -30,3 +30,87 @@ nav ul li a:hover {
     text-decoration: underline;
     color: #a29bfe;
 }
+
+/* Ocultar el botón de menú de hamburguesa por defecto */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Ocultar el menú en vistas móviles (se mostrará en formato hamburguesa) */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Breakpoints */
+/* Móviles (max-width: 768px) */
+@media (max-width: 768px) {
+    .header_title {
+        font-size: 3em;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Tablets (min-width: 769px y max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header_title {
+        font-size: 4em;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+}
+
+/* PC (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .header_title {
+        font-size: 5em;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+}

@@ -48,7 +48,7 @@ app.post('/submit_homework_form', async(request, response)=>{
     try{
         const nuevoFormulario = new Formulario({nombre, email, duda})
         await nuevoFormulario.save()
-        response.json({ message: 'Formulario recibido con éxito' })
+        response.json({ message: 'Información recibida con éxito. Pronto recibirás un mensaje de uno de nuestros docentes especializados.' })
     }catch(error){
         console.error('Error al guardar el formulario:', error)
         response.status(500).json({ message: 'Error al guardar el formulario' })

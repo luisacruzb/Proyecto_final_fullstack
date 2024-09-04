@@ -2,3 +2,30 @@
     font-family: 'Rubik-Regular';
     color: snow;
 }
+.page_section{
+    grid-area: page_section;
+    padding: 0em !important;
+    display: grid;
+    justify-content: center;
+}
+.filter_section{
+        background-color: #2B2638;
+        padding: 1em;
+        border-radius: 0.5em;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        width: 400px;
+        max-width: 30em;
+        color: whitesmoke;
+        font-family: 'Rubik-Regular';
+        display: grid;
+}
+.filter_section>form>input[type=text]{
+    background-color: #3B364C;
+    border: solid 1px #6E54B5;
+    border-radius: 0.5em;
+    color: whitesmoke;
+    width: 100%;
+    height: 2.5em;
+    padding: 1em;
+    outline: none;
+}

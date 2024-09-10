@@ -17,7 +17,6 @@ function fetchAndDisplayData() {
                     <p><strong>Nombre:</strong> ${item.nombre}</p>
                     <p><strong>Email:</strong> ${item.email}</p>
                     <p><strong>Duda:</strong> ${item.duda}</p>
-                    <hr>
                 `;
                 dataContainer.appendChild(itemElement);
             });
@@ -55,7 +54,6 @@ function filterItems() {
             <p><strong>Nombre:</strong> ${item.nombre}</p>
             <p><strong>Email:</strong> ${item.email}</p>
             <p><strong>Duda:</strong> ${item.duda}</p>
-            <hr>
         `;
         dataContainer.appendChild(itemElement);
     });

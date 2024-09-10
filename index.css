@@ -58,6 +58,45 @@
     text-align: left;
 }
 
+.respuestas-container{
+    padding-top: 0.5em;
+    color: aliceblue;
+}
+.teacher_name_container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.5em;
+    font-family: 'Rubik-Regular';
+    font-size: 0.8em;
+}
+
+.teacher_name{
+    font-size: 1em;
+}
+
+.teacher_name_text {
+    font-size: 0.8em;
+}
+
+.teacher_answer_container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: start;
+    column-gap: 0.5em;
+    font-family: 'Rubik-Regular';
+    font-size: 0.8em;
+}
+.teacher_answer{
+    font-size: 1em;
+}
+
+.teacher_answer_text{
+    font-size: 0.8em;
+    text-align: justify;
+}
 @media (max-width: 768px) {
     #dataContainer{
         display: grid;
@@ -69,4 +108,4 @@
         justify-content: center;
         justify-items: center;
     }
-    }
+}

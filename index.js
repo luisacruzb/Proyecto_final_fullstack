@@ -14,9 +14,11 @@ function fetchAndDisplayData() {
                 const itemElement = document.createElement('div')
                 itemElement.classList.add('data-item')
                 itemElement.innerHTML = `
-                    <p><strong>Nombre:</strong> ${item.nombre}</p>
-                    <p><strong>Email:</strong> ${item.email}</p>
-                    <p><strong>Duda:</strong> ${item.duda}</p>
+                    <div class='claseInventada'>
+                        <p><strong>Nombre:</strong> ${item.nombre}</p>
+                        <p><strong>Email:</strong> ${item.email}</p>
+                        <p><strong>Duda:</strong> ${item.duda}</p>
+                    </div>
                 `
 
                 // Crear un contenedor para las respuestas

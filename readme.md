@@ -25,8 +25,6 @@ public
 - [index.js] 
 - [db.js] - archivo de conexión a MongoDB
 - [server.js] - servidor para el backend
-- [route] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
 - [Fronted](https://github.com/luisacruzb/Proyecto_final_fullstack/edit/main/readme.md) - HTML -JS 
 - [Backend](https://github.com/luisacruzb/backend_proyecto_final) -JS 
 

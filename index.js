@@ -1,7 +1,7 @@
 console.log('Js Working')
 
 function fetchAndDisplayData() {
-    fetch('http://localhost:3000/get_homework_data')
+    fetch('https://backend-proyecto-final-q2cz.vercel.app/get_homework_data')
         .then(response => response.json())
         .then(data => {
             const dataContainer = document.getElementById('dataContainer')

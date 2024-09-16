@@ -14,7 +14,7 @@ function fetchAndDisplayData() {
                 const itemElement = document.createElement('div')
                 itemElement.classList.add('data-item')
                 itemElement.innerHTML = `
-                    <div class='claseInventada'>
+                    <div class='preguntas_container '>
                         <p><strong>Nombre:</strong> ${item.nombre}</p>
                         <p><strong>Email:</strong> ${item.email}</p>
                         <p><strong>Duda:</strong> ${item.duda}</p>
@@ -78,10 +78,35 @@ function filterItems() {
         const itemElement = document.createElement('div')
         itemElement.classList.add('data-item')
         itemElement.innerHTML = `
-            <p><strong>Nombre:</strong> ${item.nombre}</p>
-            <p><strong>Email:</strong> ${item.email}</p>
-            <p><strong>Duda:</strong> ${item.duda}</p>
+            <div class='preguntas_container '>
+                <p><strong>Nombre:</strong> ${item.nombre}</p>
+                <p><strong>Email:</strong> ${item.email}</p>
+                <p><strong>Duda:</strong> ${item.duda}</p>
+            </div>
         `
+        // Crear un contenedor para las respuestas
+        const respuestasContainer = document.createElement('div')
+        respuestasContainer.classList.add('respuestas-container')
+
+        // Agregar cada respuesta al contenedor de respuestas
+        item.respuestas.forEach(respuesta  =>{
+            const respuestaElement = document.createElement('div')
+            respuestaElement.classList.add('respuesta-item')
+            respuestaElement.innerHTML = `
+            <div class='teacher_name_container'>
+                <p class='teacher_name'>Docente:</p>
+                <p class='teacher_name_text'>${respuesta.teacher_name}</p>
+            </div>
+            <div class='teacher_answer_container'>
+                <p class='teacher_answer'>Respuesta:</p>
+                <p class='teacher_answer_text'>${respuesta.respuesta}</p>
+            </div>
+                
+            `
+            respuestasContainer.appendChild(respuestaElement)
+        })
+        // Agregar el contenedor de respuestas al elemento de la pregunta
+        itemElement.appendChild(respuestasContainer)
         dataContainer.appendChild(itemElement)
     })
 }

@@ -21,6 +21,8 @@
 body {
     background-color: #6c5ce7;
     font-family: 'Jersey10', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 main {
@@ -28,19 +30,21 @@ main {
     text-align: center;
 }
 
-.page_container{
+.page_container {
     display: grid;
     width: 100vw;
     height: fit-content;
-    grid-template-areas: 
+    grid-template-areas:
         'header_section'
         'title_section'
         'page_section';
 }
-.header_section{
+
+.header_section {
     grid-area: header_section;
 }
-.title_section{
+
+.title_section {
     grid-area: title_section;
     padding: 1em;
     padding-top: 1em;
@@ -48,7 +52,8 @@ main {
     display: grid;
     row-gap: 1em;
 }
-.title_section h1{
+
+.title_section h1 {
     font-family: 'Rubik-Regular';
     text-align: center;
     color: whitesmoke;
@@ -58,9 +63,10 @@ main {
     font-size: 1.1em;
     font-family: 'Rubik-Regular';
     color: rgb(222, 222, 222);
-    
+
 }
-.page_section{
+
+.page_section {
     grid-area: page_section;
     padding: 2em;
 }

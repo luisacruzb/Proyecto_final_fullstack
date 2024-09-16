@@ -44,6 +44,7 @@
     justify-content: space-between;
     padding: 1.3em;
     justify-items: center;
+    padding-bottom: 6em;
 }
 
 .data-item {
@@ -138,7 +139,7 @@
 }
 
 .footer_section {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin: 0 auto;
     width: 100vw;
